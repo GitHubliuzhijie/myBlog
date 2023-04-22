@@ -1,14 +1,15 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
+prev: false
+
 hero:
-  name: "博客"
-  text: "A VitePress Site"
-  tagline: My great project tagline
+  name: "知识总结"
+  text: "收集有用的知识总结"
+  tagline: 快来使用吧!
   actions:
     - theme: brand
-      text: Markdown Examples
+      text: 开始使用
       link: /markdown-examples
     - theme: alt
       text: API Examples

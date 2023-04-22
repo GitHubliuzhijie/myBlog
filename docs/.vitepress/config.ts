@@ -1,29 +1,32 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig } from "vitepress";
 
-// https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base:'/myBlog/',
-  title: "刘志杰",
+  base: "/myBlog/",
+  title: "知识总结",
   description: "A VitePress Site",
+  head: [["link", { rel: "icon", href: "/public/favicon.ico" }]],
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: '首页', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: "首页", link: "/" },
+      { text: "Examples", link: "/markdown-examples" },
     ],
 
     sidebar: [
       {
-        text: 'Examples',
+        text: "HTTP 状态码",
+        items: [{ text: "状态码列表", link: "/statusCode" }],
+      },
+      {
+        text: "Examples",
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
+          { text: "Markdown Examples", link: "/markdown-examples" },
+          { text: "Runtime API Examples", link: "/api-examples" },
+        ],
+      },
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
-  }
-})
+      { icon: "github", link: "https://github.com/GitHubliuzhijie/myBlog" },
+    ],
+  },
+});
