@@ -49,11 +49,11 @@ git 是一个开源的分布式版本控制系统，也是计算机专业找工�
 
 关于 git 的教程网上已经有很多很多，其大致工作流程如下图：
 
-![](./img/workload.png)
+![](/img/workload.png)
 
 其大致命令如下图：
 
-![](./img/cheatsheet.png)
+![](/img/cheatsheet.png)
 
 本文主要介绍常用的 33 条 git 命令，希望能够大家使用 git 带来一些帮助。
 
