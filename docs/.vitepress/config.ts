@@ -9,7 +9,7 @@ export default defineConfig({
   cleanUrls: true,
   head: [["link", { rel: "icon", href: "/favicon.ico" }]],
   themeConfig: {
-    logo: '/logo.png',
+    logo: "/logo.png",
     nav: [
       { text: "首页", link: "/" },
       { text: "Examples", link: "/markdown-examples" },
@@ -22,7 +22,10 @@ export default defineConfig({
       },
       {
         text: "GIT",
-        items: [{ text: "git命令", link: "/gitCommand" }],
+        items: [
+          { text: "git命令", link: "/gitCommand" },
+          { text: "git提交规范", link: "/gitSpecification" },
+        ],
       },
       {
         text: "Examples",
