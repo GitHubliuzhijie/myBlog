@@ -28,6 +28,10 @@ export default defineConfig({
         ],
       },
       {
+        text: "前端资源提示符",
+        items: [{ text: "资源提示符", link: "/resourcePrompt" }],
+      },
+      {
         text: "Examples",
         items: [
           { text: "Markdown Examples", link: "/markdown-examples" },

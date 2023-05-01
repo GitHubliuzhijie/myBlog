@@ -1,0 +1,4 @@
+- async 一步加载脚本，加载完后立即执行脚本
+- defer 异步加载脚本，页面加载完成之后DomcontentLoaded事件之前执行脚本
+- preload 提前加载脚本，但是不执行，缓存后期可能会使用
+- prefetch 同preload但是优先级低，空闲时候加载
