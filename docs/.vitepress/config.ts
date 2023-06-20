@@ -28,6 +28,12 @@ export default defineConfig({
         ],
       },
       {
+        text: "Nginx",
+        items: [
+          { text: "nginx常用命令", link: "/nginxCommand" },
+        ],
+      },
+      {
         text: "前端资源提示符",
         items: [{ text: "资源提示符", link: "/resourcePrompt" }],
       },
