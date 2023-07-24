@@ -21,9 +21,9 @@ hero:
 features:
   - title: 学而时习之
     details: 学而时习之 不亦悦乎
-  - title: 陈雯我儿子
+  - title: Feature B
     icon: ⚡️
-    details: ————刘志杰
+    details: 自己有海 不赶浪潮
   - title: Feature C
     details: 幸福总是后知后觉 当时只道寻常
 ---
