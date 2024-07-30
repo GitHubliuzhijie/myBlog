@@ -5,7 +5,7 @@ export default defineConfig({
   title: "知识总结",
   // lang: 'zh-cmn-Hans',
   lang: "zh-CN",
-  description: "A VitePress Site",
+  description: "我的博客",
   cleanUrls: true,
   head: [["link", { rel: "icon", href: "/favicon.ico" }]],
   themeConfig: {
