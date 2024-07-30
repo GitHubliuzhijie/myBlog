@@ -7,7 +7,7 @@ export default defineConfig({
   lang: "zh-CN",
   description: "我的博客",
   cleanUrls: true,
-  head: [["link", { rel: "icon", href: "/favicon.ico" }]],
+  head: [["link", { rel: "icon", href: "./favicon.ico" }]],
   themeConfig: {
     nav: [
       { text: "首页", link: "/" },
