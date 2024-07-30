@@ -29,13 +29,17 @@ export default defineConfig({
       },
       {
         text: "Nginx",
-        items: [
-          { text: "nginx常用命令", link: "/nginxCommand" },
-        ],
+        items: [{ text: "nginx常用命令", link: "/nginxCommand" }],
       },
       {
-        text: "前端资源提示符",
-        items: [{ text: "资源提示符", link: "/resourcePrompt" }],
+        text: "前端知识总结",
+        items: [
+          { text: "资源提示符", link: "/js/resourcePrompt" },
+          {
+            text: "JS-35个实用方法",
+            link: "/js/js35",
+          },
+        ],
       },
       {
         text: "Examples",
