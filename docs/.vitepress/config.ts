@@ -9,7 +9,6 @@ export default defineConfig({
   cleanUrls: true,
   head: [["link", { rel: "icon", href: "/favicon.ico" }]],
   themeConfig: {
-    logo: "/logo.png",
     nav: [
       { text: "首页", link: "/" },
       { text: "Examples", link: "/markdown-examples" },
