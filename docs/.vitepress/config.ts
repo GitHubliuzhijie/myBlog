@@ -34,10 +34,7 @@ export default defineConfig({
         text: "前端知识总结",
         items: [
           { text: "资源提示符", link: "/js/resourcePrompt" },
-          {
-            text: "JS-35个实用方法",
-            link: "/js/js35",
-          },
+          { text: "JS-35个实用方法", link: "/js/js-common" },
         ],
       },
       {

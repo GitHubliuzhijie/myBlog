@@ -315,4 +315,75 @@ average([1,9,18,36]) // 16
  *    place-items: center;
  * }
  */
+// 36、深拷贝一个值
+/**
+ * 深拷贝一个值。
+ *
+ * @param {*} val - 需要被拷贝的值。可以是任何类型。
+ * @param {WeakMap} hash - 用于存储已经拷贝过的对象的引用，以避免循环拷贝。
+ * @param {Set} seen - 用于记录在拷贝过程中已经处理过的对象，以检测循环引用。
+ * @returns {*} - 返回一个与输入值相同但独立的对象或值。
+ */
+function deepCopy(val, hash = new WeakMap(), seen = new Set()) {
+  // 检查是否已经处理过当前对象，以避免循环引用导致的无限递归。
+  // 检查循环引用
+  if (seen.has(val)) {
+    return val;
+  }
+
+  // 如果值不是对象或为null，则直接返回，不需要深拷贝。
+  // 对于非对象和数组类型，直接返回
+  if (typeof val !== "object" || val === null) {
+    return val;
+  }
+
+  // 检查当前对象是否已经在hash中，如果是，则直接返回其拷贝，避免重复拷贝。
+  // 检查是否已经存在于哈希表中，是则直接返回引用
+  if (hash.has(val)) {
+    return hash.get(val);
+  }
+
+  // 添加当前对象到seen中，标记为已处理。
+  // 记录当前对象，以处理循环引用
+  seen.add(val);
+
+  // 根据不同的类型创建对应的拷贝对象。
+  // 根据不同的类型创建对应的拷贝
+  let copy;
+  if (Array.isArray(val)) {
+    copy = [];
+  } else if (val instanceof Date) {
+    copy = new Date(val.getTime());
+  } else if (val instanceof RegExp) {
+    // 改进RegExp对象的深拷贝
+    copy = new RegExp(val.source, val.flags);
+  } else if (typeof val === "function") {
+    // 函数直接返回引用，不进行深拷贝。
+    // 处理函数的深拷贝，考虑函数内部可能的闭包引用问题
+    // 对于函数，我们直接返回引用（浅拷贝）
+    copy = val;
+  } else {
+    copy = {};
+  }
+
+  // 将拷贝的对象与原对象关联起来，存储在hash中。
+  // 将新对象存入哈希表
+  hash.set(val, copy);
+
+  // 遍历原对象的所有属性，并递归深拷贝它们的值。
+  // 递归复制对象的属性
+  // 使用for...of循环代替Object.keys加forEach，提升性能
+  for (let key in val) {
+    if (Object.hasOwnProperty.call(val, key)) {
+      copy[key] = deepCopy(val[key], hash, seen);
+    }
+  }
+
+  // 清除seen中对当前对象的引用，避免内存泄漏。
+  seen.delete(val);
+
+  // 返回拷贝后的对象。
+  return copy;
+}
+
 ```
